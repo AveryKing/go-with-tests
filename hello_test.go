@@ -3,10 +3,20 @@ package main
 import "testing"
 
 func TestHello(t *testing.T) {
-	got := Hello("Avery")
-	want := "Hello, Avery"
+	t.Run("saying hello to people", func(t *testing.T) {
+		got := Hello("Avery")
+		want := "Hello, Avery"
 
-	if got != want {
-		t.Errorf("got %q  want %q", got, want)
-	}
+		if got != want {
+			t.Errorf("got %q  want %q", got, want)
+		}
+	})
+	t.Run("hello to world if no name", func(t *testing.T) {
+		got := Hello("")
+		want := "Hello, world"
+
+		if got != want {
+			t.Errorf("got %q want %q", got, want)
+		}
+	})
 }
