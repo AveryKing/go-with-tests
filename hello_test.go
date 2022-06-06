@@ -1,6 +1,7 @@
 package main
 
 import (
+	"go_with_tests"
 	"testing"
 )
 
@@ -13,25 +14,25 @@ func TestHello(t *testing.T) {
 	}
 
 	t.Run("saying hello to people", func(t *testing.T) {
-		got := Hello("Avery", "EN")
+		got := main.Hello("Avery", "EN")
 		want := "Hello, Avery"
 		assetCorrectMessage(t, got, want)
 	})
 
 	t.Run("hello to world if no name", func(t *testing.T) {
-		got := Hello("", "EN")
+		got := main.Hello("", "EN")
 		want := "Hello, world"
 		assetCorrectMessage(t, got, want)
 	})
 
 	t.Run("in Spanish", func(t *testing.T) {
-		got := Hello("Avery", "ES")
+		got := main.Hello("Avery", "ES")
 		want := "Hola, Avery"
 		assetCorrectMessage(t, got, want)
 	})
 
 	t.Run("in French", func(t *testing.T) {
-		got := Hello("Avery", "FR")
+		got := main.Hello("Avery", "FR")
 		want := "Bonjour, Avery"
 		assetCorrectMessage(t, got, want)
 	})
