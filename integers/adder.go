@@ -1,4 +1,4 @@
-package main
+package integers
 
 // Add two integers and returns the sum
 func Add(x, y int) int {
