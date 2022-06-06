@@ -1,3 +1,3 @@
-module avery.com/app1
+module go_with_tests
 
 go 1.18

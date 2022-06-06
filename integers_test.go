@@ -1,9 +1,12 @@
-package integers
+package main
 
-import "testing"
+import (
+	"go_with_tests/integers"
+	"testing"
+)
 
 func TestAdder(t *testing.T) {
-	sum := Add(6, 9)
+	sum := integers.Add(6, 9)
 	expected := 15
 
 	if sum != expected {
