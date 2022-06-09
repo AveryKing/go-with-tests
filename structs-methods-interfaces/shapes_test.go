@@ -3,7 +3,8 @@ package main
 import "testing"
 
 func TestPerimeter(t *testing.T) {
-	got := Perimeter(10.0, 10.0)
+	rectangle := Rectangle{10.0, 10.0}
+	got := Perimeter(rectangle)
 	want := 40.0
 
 	if got != want {
@@ -12,7 +13,7 @@ func TestPerimeter(t *testing.T) {
 }
 
 func TestArea(t *testing.T) {
-	got := Area(6.0, 9.0)
+	got := Area(Rectangle{6.0, 9.0})
 	want := 54.0
 
 	if got != want {
